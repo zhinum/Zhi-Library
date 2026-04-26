@@ -43,7 +43,14 @@ export class LibraryUi {
       this.ifReadStatus(card),
     );
 
-    bookCard.append(title, author, pages, ifRead);
+    const delBtn = this.helpCreateElement("button", "delete-button", "Delete");
+    const togBtn = this.helpCreateElement(
+      "button",
+      "toggle-button",
+      "read status",
+    );
+
+    bookCard.append(title, author, pages, ifRead, delBtn, togBtn);
 
     return bookCard;
   }
