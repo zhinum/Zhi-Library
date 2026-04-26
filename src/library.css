@@ -20,3 +20,29 @@
   flex-direction: column;
   gap: 0.5rem;
 }
+
+input {
+  border: 2px solid gray;
+  padding: 8px;
+  border-radius: 4px;
+  outline: none;
+}
+
+input:required {
+  border-left: 5px solid orange;
+}
+
+input:user-valid {
+  border: 3px solid green;
+}
+
+input:user-invalid {
+  border: 2px solid red;
+}
+
+.error-msg {
+  color: red;
+}
+input:invalid + .error-msg {
+  display: block;
+}
